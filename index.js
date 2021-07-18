@@ -1,25 +1,35 @@
+document.
+addEventListener(      'DOMContentLoaded',
+  () => {
+    const words = ['баклажан', "собака", "убийца", "гамадрил"]
+    const ranWorddddd = words[Math.floor(Math.random() * words.length)]
+    const answerArr = []
+    for (
+      let i = 0;
+      i < ranWorddddd.length;
+      i++) {answerArr.push('_')}
+
+    let hhhhhh = ranWorddddd.length
+
+    while
+      (hhhhhh > 0) {
+      alert(answerArr.join(' ')
+      ); let guess = prompt('Угадайте букву'); if ( guess === null ) break
+      else
+      if (guess.length !== 1) alert('Введите только одну букву')
 
 
-let p = require("path")
-let filesystem = require('fs')
-let  server = require("http");
-
-let h =  3010 ;
-
-let  server2 = server.createServer(function (q,
-                                             response)
-{
-  if(
-    q.method == 'GET' && q.url == "/"
-  ) {
-    response.write('Home Page'); response.end();
-  }
-  else
-  {
-    response.write('Error 404: Page Not Found'); response.end();
-  }
-})
-
-server2.listen(h);
 
 
+      else {
+        for (let i = 0; i < ranWorddddd.length; i++) {if (ranWorddddd[i] === guess) {answerArr[i] = guess;hhhhhh-- }}
+      }
+
+    }
+
+    alert(
+      answerArr.join(' '))
+    alert(
+
+      'Отлично, было загадано слово ' + ranWorddddd)
+  })
